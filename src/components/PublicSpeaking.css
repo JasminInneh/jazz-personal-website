@@ -1,0 +1,211 @@
+.public-speaking {
+  background: linear-gradient(135deg, var(--secondary-light) 0%, var(--neutral-white) 100%);
+}
+
+.subsection-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--neutral-charcoal);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.speaking-content {
+  margin-bottom: 4rem;
+}
+
+.past-events {
+  margin-bottom: 4rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  background: var(--neutral-white);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-teal);
+  position: relative;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--primary-coral);
+}
+
+.event-type {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--secondary-lavender) 0%, #9B7EDE 100%);
+  color: var(--neutral-white);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neutral-charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.event-topic {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-teal);
+  margin-bottom: 1rem;
+}
+
+.event-description {
+  color: var(--neutral-charcoal);
+  opacity: 0.8;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+  opacity: 0.7;
+}
+
+.upcoming-events {
+  margin-top: 4rem;
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.upcoming-card {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--teal-alt) 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: var(--neutral-white);
+  box-shadow: 0 5px 20px rgba(32, 201, 151, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.upcoming-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.upcoming-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(32, 201, 151, 0.4);
+}
+
+.upcoming-status {
+  display: inline-block;
+  background-color: var(--secondary-mustard);
+  color: var(--neutral-charcoal);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.upcoming-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.upcoming-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.speaking-cta {
+  background: linear-gradient(135deg, var(--primary-coral) 0%, #FF5252 100%);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  color: var(--neutral-white);
+  margin-top: 4rem;
+}
+
+.cta-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.speaking-cta .btn {
+  background-color: var(--neutral-white);
+  color: var(--primary-coral);
+}
+
+.speaking-cta .btn:hover {
+  background-color: var(--secondary-mustard);
+  color: var(--neutral-charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .events-grid,
+  .upcoming-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card,
+  .upcoming-card {
+    padding: 2rem;
+  }
+
+  .speaking-cta {
+    padding: 2rem;
+  }
+
+  .cta-content h3 {
+    font-size: 1.5rem;
+  }
+}

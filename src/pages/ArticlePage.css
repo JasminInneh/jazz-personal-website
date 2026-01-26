@@ -1,0 +1,11 @@
+.article-page {
+  min-height: 100vh;
+  background-color: var(--neutral-white);
+  padding-top: 80px;
+}
+
+.article-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}

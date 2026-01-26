@@ -1,0 +1,123 @@
+.content-creation {
+  background-color: var(--neutral-white);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.content-card {
+  background: linear-gradient(135deg, var(--neutral-white) 0%, var(--secondary-light) 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid var(--neutral-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-teal) 0%, var(--primary-coral) 50%, var(--secondary-mustard) 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.content-card:hover::before {
+  transform: scaleX(1);
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-teal);
+}
+
+.content-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neutral-charcoal);
+  margin-bottom: 1rem;
+}
+
+.content-description {
+  color: var(--neutral-charcoal);
+  opacity: 0.8;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.content-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.platform-tag {
+  background-color: var(--primary-teal);
+  color: var(--neutral-white);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.content-stats {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-coral);
+  margin-top: auto;
+}
+
+.content-cta {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--teal-alt) 100%);
+  border-radius: 16px;
+  color: var(--neutral-white);
+}
+
+.content-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+.content-cta .btn {
+  background-color: var(--neutral-white);
+  color: var(--primary-teal);
+}
+
+.content-cta .btn:hover {
+  background-color: var(--secondary-mustard);
+  color: var(--neutral-charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-card {
+    padding: 2rem;
+  }
+}
