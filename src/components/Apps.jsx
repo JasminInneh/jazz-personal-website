@@ -10,34 +10,8 @@ const Apps = () => {
       tech: ["React", "Node.js", "MongoDB"],
       image: "📊",
       link: "#",
-      featured: true
-    },
-    {
-      id: 2,
-      name: "CodeSnippet Manager",
-      description: "Organize and share your code snippets with syntax highlighting and search functionality. Perfect for developers.",
-      tech: ["Vue.js", "Firebase", "Prism.js"],
-      image: "💻",
-      link: "#",
-      featured: false
-    },
-    {
-      id: 3,
-      name: "DevConnect",
-      description: "A social platform for developers to connect, share projects, and collaborate. Features real-time chat and project showcases.",
-      tech: ["React", "Socket.io", "PostgreSQL"],
-      image: "🌐",
-      link: "#",
-      featured: false
-    },
-    {
-      id: 4,
-      name: "API Playground",
-      description: "Test and document APIs with an interactive playground. Supports REST, GraphQL, and WebSocket endpoints.",
-      tech: ["Next.js", "TypeScript", "GraphQL"],
-      image: "🔧",
-      link: "#",
-      featured: false
+      featured: true,
+      comingSoon: true
     }
   ]
 
@@ -46,7 +20,7 @@ const Apps = () => {
       <div className="section-header">
         <h2 className="section-title">Apps & Projects</h2>
         <p className="section-subtitle">
-          Building innovative solutions and bringing ideas to life
+          Currently working on innovative solutions—more projects coming soon
         </p>
       </div>
       <div className="apps-grid">
@@ -61,9 +35,19 @@ const Apps = () => {
                   <span key={index} className="tech-tag">{tech}</span>
                 ))}
               </div>
+              {app.featured && (
+                <div className="featured-badge-container">
+                  <span className="featured-badge">Featured</span>
+                </div>
+              )}
               <div className="app-actions">
-                <a href={app.link} className="app-link">View Project →</a>
-                {app.featured && <span className="featured-badge">Featured</span>}
+                {app.comingSoon ? (
+                  <span className="coming-soon-message" aria-label="Project coming soon: Almost there. One commit at a time.">Coming Soon</span>
+                ) : !app.link || app.link === "#" || app.link === "" ? (
+                  <span className="coming-soon-message" aria-label="Project coming soon: Almost there. One commit at a time.">Almost there. One commit at a time.</span>
+                ) : (
+                  <a href={app.link} className="app-link" target="_blank" rel="noopener noreferrer">View Project →</a>
+                )}
               </div>
             </div>
           </div>

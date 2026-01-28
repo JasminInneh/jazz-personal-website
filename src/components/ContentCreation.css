@@ -1,5 +1,162 @@
 .content-creation {
-  background-color: var(--neutral-white);
+  background: linear-gradient(135deg, var(--neutral-white) 0%, var(--secondary-light) 100%);
+}
+
+.content-brief {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.content-skills {
+  background: var(--neutral-white);
+  border-radius: 16px;
+  padding: 3rem;
+  border: 2px solid var(--neutral-gray);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.content-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--neutral-charcoal);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.content-focus-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(32, 201, 151, 0.1) 0%, rgba(255, 107, 107, 0.05) 100%);
+  border-radius: 12px;
+  border: 2px solid rgba(32, 201, 151, 0.2);
+}
+
+.focus-label {
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 1rem;
+}
+
+.focus-badge {
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.focus-badge:nth-child(2) {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--teal-alt) 100%);
+  color: var(--neutral-white);
+}
+
+.focus-badge:nth-child(3) {
+  background: linear-gradient(135deg, var(--secondary-mustard) 0%, #FFD93D 100%);
+  color: var(--neutral-charcoal);
+}
+
+.focus-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content-capabilities {
+  text-align: left;
+}
+
+.capabilities-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.capabilities-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-teal) 0%, var(--primary-coral) 50%, var(--secondary-mustard) 100%);
+  border-radius: 2px;
+}
+
+.capabilities-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.capabilities-list li {
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--neutral-charcoal);
+  position: relative;
+  padding-left: 2rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.capabilities-list li:nth-child(1) {
+  background: linear-gradient(135deg, rgba(32, 201, 151, 0.1) 0%, rgba(32, 201, 151, 0.05) 100%);
+  border-left: 3px solid var(--primary-teal);
+}
+
+.capabilities-list li:nth-child(2) {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 107, 107, 0.05) 100%);
+  border-left: 3px solid var(--primary-coral);
+}
+
+.capabilities-list li:nth-child(3) {
+  background: linear-gradient(135deg, rgba(179, 157, 219, 0.1) 0%, rgba(179, 157, 219, 0.05) 100%);
+  border-left: 3px solid var(--secondary-lavender);
+}
+
+.capabilities-list li:nth-child(4) {
+  background: linear-gradient(135deg, rgba(247, 201, 72, 0.1) 0%, rgba(247, 201, 72, 0.05) 100%);
+  border-left: 3px solid var(--secondary-mustard);
+}
+
+.capabilities-list li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.capabilities-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0.8rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.capabilities-list li:nth-child(1)::before {
+  color: var(--primary-teal);
+}
+
+.capabilities-list li:nth-child(2)::before {
+  color: var(--primary-coral);
+}
+
+.capabilities-list li:nth-child(3)::before {
+  color: var(--secondary-lavender);
+}
+
+.capabilities-list li:nth-child(4)::before {
+  color: var(--secondary-mustard);
 }
 
 .content-grid {
@@ -79,11 +236,15 @@
   font-weight: 500;
 }
 
-.content-stats {
-  font-size: 1.1rem;
+.content-focus {
+  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--primary-coral);
+  color: var(--primary-teal);
   margin-top: auto;
+  padding: 0.5rem 1rem;
+  background-color: rgba(32, 201, 151, 0.1);
+  border-radius: 20px;
+  display: inline-block;
 }
 
 .content-cta {
@@ -113,6 +274,27 @@
 }
 
 @media (max-width: 768px) {
+  .content-brief {
+    margin-bottom: 2rem;
+  }
+
+  .content-skills {
+    padding: 2rem 1.5rem;
+  }
+
+  .content-intro {
+    font-size: 1rem;
+  }
+
+  .content-focus-area {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .capabilities-list {
+    grid-template-columns: 1fr;
+  }
+
   .content-grid {
     grid-template-columns: 1fr;
   }

@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Articles from '../components/Articles'
 import Apps from '../components/Apps'
 import ContentCreation from '../components/ContentCreation'
-import PublicSpeaking from '../components/PublicSpeaking'
+// import PublicSpeaking from '../components/PublicSpeaking'
 
 function Home() {
   return (
@@ -12,7 +12,7 @@ function Home() {
       <Articles />
       <Apps />
       <ContentCreation />
-      <PublicSpeaking />
+      {/* <PublicSpeaking /> */}
     </>
   )
 }

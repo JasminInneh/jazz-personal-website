@@ -6,6 +6,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  justify-items: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .app-card {
@@ -104,9 +107,15 @@
   font-weight: 500;
 }
 
+.featured-badge-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .app-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -126,6 +135,34 @@
   background-color: var(--primary-teal);
   color: var(--neutral-white);
   gap: 1rem;
+}
+
+.coming-soon-message {
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--secondary-light);
+  border: 1px solid var(--neutral-gray);
+  border-radius: 8px;
+  cursor: default;
+  line-height: 1.5;
+}
+
+.coming-soon-message::before {
+  content: "✨";
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+.app-card.featured .coming-soon-message {
+  color: var(--neutral-charcoal);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .featured-badge {

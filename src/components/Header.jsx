@@ -47,7 +47,7 @@ const Header = () => {
           <a href="#articles" onClick={(e) => { e.preventDefault(); scrollToSection('articles') }}>Articles</a>
           <a href="#apps" onClick={(e) => { e.preventDefault(); scrollToSection('apps') }}>Apps</a>
           <a href="#content" onClick={(e) => { e.preventDefault(); scrollToSection('content') }}>Content</a>
-          <a href="#speaking" onClick={(e) => { e.preventDefault(); scrollToSection('speaking') }}>Speaking</a>
+          {/* <a href="#speaking" onClick={(e) => { e.preventDefault(); scrollToSection('speaking') }}>Speaking</a> */}
           <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact') }}>Contact</a>
         </nav>
         <button 
